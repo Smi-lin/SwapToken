@@ -6,17 +6,6 @@ import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 import "@openzeppelin/contracts/token/ERC20/extensions/ERC20Burnable.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 
-contract Celo is ERC20, ERC20Burnable, Ownable {
-    constructor(address initialOwner)
-        ERC20("Celo", "CLT")
-        Ownable(initialOwner)
-    {}
-
-    function mint(address to, uint256 amount) public onlyOwner {
-        _mint(to, amount);
-    }
-}
-
 contract Base is ERC20, ERC20Burnable, Ownable {
     constructor(address initialOwner)
         ERC20("Base", "BST")
